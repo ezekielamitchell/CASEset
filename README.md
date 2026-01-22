@@ -144,90 +144,14 @@ See [References](references.md) for a complete bibliography of related work in g
 
 ## Project Structure
 
-```text
-CASEset/
-├── caseset/                    # Main Python package
-│   ├── __init__.py
-│   ├── collect/                # Data collection
-│   │   ├── __init__.py
-│   │   ├── capture.py          # Synchronized multi-stream capture
-│   │   ├── tobii.py            # Tobii Pro Fusion SDK wrapper
-│   │   ├── webcam.py           # Webcam capture module
-│   │   └── screen.py           # Screenshot capture module
-│   │
-│   ├── data/                   # Data processing & loading
-│   │   ├── __init__.py
-│   │   ├── dataset.py          # PyTorch Dataset class
-│   │   ├── preprocess.py       # Face detection, normalization
-│   │   └── validate.py         # Data quality checks
-│   │
-│   ├── models/                 # Model architectures
-│   │   ├── __init__.py
-│   │   ├── faze.py             # FAZE DT-ED encoder
-│   │   ├── translator.py       # Coordinate translator (5-layer FC)
-│   │   ├── cct.py              # Compact Convolutional Transformer
-│   │   └── pipeline.py         # Full FAZE-CCT pipeline
-│   │
-│   ├── training/               # Training infrastructure
-│   │   ├── __init__.py
-│   │   ├── trainer.py          # Training loop
-│   │   └── losses.py           # Loss functions
-│   │
-│   └── evaluation/             # Evaluation & metrics
-│       ├── __init__.py
-│       ├── metrics.py          # Angular/pixel error calculations
-│       └── visualize.py        # Gaze overlay visualizations
-│
-├── configs/                    # Configuration files
-│   ├── collect.yaml            # Data collection settings
-│   ├── train.yaml              # Training hyperparameters
-│   └── model.yaml              # Architecture configurations
-│
-├── scripts/                    # CLI entry points
-│   ├── collect_session.py      # Run data collection session
-│   ├── preprocess.py           # Batch preprocess raw data
-│   ├── train.py                # Training script
-│   └── evaluate.py             # Evaluation script
-│
-├── notebooks/                  # Jupyter notebooks
-│   ├── 01_explore_data.ipynb   # Dataset exploration
-│   ├── 02_baseline_faze.ipynb  # FAZE baseline experiments
-│   └── 03_ablations.ipynb      # Ablation studies
-│
-├── data/                       # Data directory (gitignored)
-│   ├── raw/                    # Raw collection sessions
-│   ├── processed/              # Preprocessed training data
-│   └── external/               # ETH-XGaze, GazeCapture downloads
-│
-├── outputs/                    # Training outputs (gitignored)
-│   ├── checkpoints/            # Model checkpoints
-│   ├── logs/                   # TensorBoard logs
-│   └── results/                # Evaluation results
-│
-├── docs/                       # Documentation (GitBook)
-│   └── README.md
-│
-├── tests/                      # Unit tests (optional)
-│   └── test_data.py
-│
-├── README.md
-├── SUMMARY.md
-├── references.md
-├── pyproject.toml              # Project dependencies
-├── .gitignore
-└── Makefile                    # Common commands
 ```
-
-### Directory Purposes
-
-| Directory | Purpose |
-| --------- | ------- |
-| `caseset/` | Importable Python package with all core logic |
-| `configs/` | YAML configs to avoid hardcoded values |
-| `scripts/` | Thin CLI wrappers that load configs and call package code |
-| `notebooks/` | Exploration and experiments (not production code) |
-| `data/` | All data artifacts, fully gitignored |
-| `outputs/` | Training artifacts, fully gitignored |
+CASEset/
+├── README.md              # This file
+├── SUMMARY.md             # GitBook table of contents
+├── references.md          # Bibliography and citations
+└── docs/
+    └── README.md          # Additional documentation
+```
 
 ## Citation
 
