@@ -88,7 +88,7 @@ CASEset enables a knowledge distillation paradigm where expensive, high-precisio
 
 Target milestones for solo research development through Fall 2026 graduation.
 
-### Spring 2026 (Current Quarter: Jan - May)
+### Winter 2026 (Current Quarter: Jan - Mar)
 
 **Focus: Infrastructure & Pilot Data**
 
@@ -100,7 +100,7 @@ Target milestones for solo research development through Fall 2026 graduation.
 
 **Deliverable:** Working data collection system with validated pilot data
 
-### Summer 2026 (May - Aug)
+### Spring 2026 (Apr - Jun)
 
 **Focus: Full Data Collection & Initial Model**
 
@@ -112,14 +112,23 @@ Target milestones for solo research development through Fall 2026 graduation.
 
 **Deliverable:** Complete dataset + functional FAZE-CCT prototype
 
+### Summer 2026 (Jun - Aug)
+
+**Focus: Model Refinement & Optimization**
+
+- [ ] Full model training on complete CASEset
+- [ ] Hyperparameter tuning and architecture iteration
+- [ ] Ablation studies (context contribution, temporal history, patch sizes)
+- [ ] Cross-user generalization evaluation
+
+**Deliverable:** Optimized FAZE-CCT model with ablation results
+
 ### Fall 2026 (Sep - Dec)
 
 **Focus: Evaluation & Thesis Completion**
 
-- [ ] Full model training on complete CASEset
-- [ ] Ablation studies (context contribution, temporal history, patch sizes)
 - [ ] Benchmark against baselines (FAZE-only, GazeCapture-trained models)
-- [ ] Cross-user generalization evaluation
+- [ ] Final model evaluation and analysis
 - [ ] Write and defend thesis
 - [ ] Prepare publication-ready results
 
