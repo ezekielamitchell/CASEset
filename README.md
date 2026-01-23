@@ -50,11 +50,22 @@ Target milestones through Fall 2026; high-level phases include infrastructure & 
 <pre>
 CASEset/
 ├── README.md              # This file
-├── SUMMARY.md             # GitBook table of contents (if present)
+├── SUMMARY.md             # GitBook table of contents
 ├── references.md          # Bibliography and citations
 ├── collect/               # Data collection modules (webcam, screen, Tobii)
 ├── configs/               # YAML configs for collection & training
-└── docs/                  # Additional documentation
+├── data/                  # Raw and processed datasets
+├── docs/                  # Additional documentation
+├── evaluation/            # Model evaluation scripts and metrics
+├── models/                # Model architectures and weights
+├── notebooks/             # Jupyter notebooks for analysis
+├── outputs/               # Generated outputs
+│   ├── checkpoints/       # Model checkpoints
+│   ├── logs/              # Training and experiment logs
+│   └── results/           # Evaluation results
+├── scripts/               # Utility and automation scripts
+├── tests/                 # Unit and integration tests
+└── training/              # Training pipelines and utilities
 </pre>
 
 <h2 align="center">Citation</h2>
