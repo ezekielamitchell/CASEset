@@ -37,6 +37,31 @@ A high-level pipeline:
 - Stage 2: Coordinate Translator maps gaze vectors to tentative screen coordinates.
 - Stage 3: CCT (Compact Convolutional Transformer) refines predictions using a 400×400 screenshot patch centered on the tentative location and optional recent click history.
 
+<div align="center">
+
+```mermaid
+graph TD
+    A[Webcam Frame] --> B["Stage 1 · FAZE DT-ED — Gaze Appearance Encoder"]
+    B --> C("Normalized Gaze Vector")
+    C --> D["Stage 2 · Coordinate Translator — Gaze Vector → Screen Coordinates"]
+    D --> E("Tentative Screen Coordinates")
+    F["Screenshot Patch · 400 × 400 px"] --> G
+    H[Click History] --> G
+    E --> G["Stage 3 · CCT Refiner — Context-Aware Transformer"]
+    G --> I("Refined Screen-Gaze Prediction")
+    style A fill:#455A64,stroke:#1C313A,stroke-width:2px,color:#FFFFFF
+    style F fill:#455A64,stroke:#1C313A,stroke-width:2px,color:#FFFFFF
+    style H fill:#455A64,stroke:#1C313A,stroke-width:2px,color:#FFFFFF
+    style B fill:#546E7A,stroke:#29434E,stroke-width:2px,color:#FFFFFF
+    style C fill:#ECEFF1,stroke:#607D8B,stroke-width:2px,color:#37474F
+    style D fill:#607D8B,stroke:#37474F,stroke-width:2px,color:#FFFFFF
+    style E fill:#ECEFF1,stroke:#78909C,stroke-width:2px,color:#37474F
+    style G fill:#37474F,stroke:#1C313A,stroke-width:2px,color:#FFFFFF
+    style I fill:#CFD8DC,stroke:#546E7A,stroke-width:2px,color:#263238
+```
+
+</div>
+
 <h2 align="center">Knowledge Distillation Approach</h2>
 
 CASEset enables distillation where expensive hardware (Tobii) teaches webcam-only models to improve accuracy while supporting on-device, privacy-preserving inference.
