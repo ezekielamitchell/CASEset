@@ -1,0 +1,37 @@
+# Claude Code
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (large files — track with Git LFS or externally)
+data/raw/
+data/processed/
+
+# Outputs
+outputs/checkpoints/
+outputs/logs/
+outputs/results/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
